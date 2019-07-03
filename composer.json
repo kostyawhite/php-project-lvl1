@@ -1,5 +1,6 @@
 {
     "name": "kostyawhite/brain-games",
+    "description": "Hexlet project",
     "bin": [
       "bin/brain-games"
     ],
@@ -9,7 +10,5 @@
             "name": "Konstantin Kochnev",
             "email": "kostyawhite89@gmail.com"
         }
-    ],
-    "minimum-stability": "dev",
-    "require": {}
+    ]
 }
