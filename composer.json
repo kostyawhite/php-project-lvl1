@@ -1,6 +1,6 @@
 {
     "name": "kostyawhite/brain-games",
-    "type": "library",
+    "type": "project",
     "description": "Hexlet project",
     "bin": [
       "bin/brain-games"
