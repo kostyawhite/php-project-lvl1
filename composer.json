@@ -13,6 +13,9 @@
         }
     ],
     "require": {
-      "php": ">=5.3"
+      "wp-cli/php-cli-tools": "^0.11.11"
+    },
+    "autoload" : {
+      "files": ["src/cli.php"]
     }
 }
