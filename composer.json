@@ -1,0 +1,13 @@
+{
+    "name": "kostya_white/brain-games",
+    "bin": [
+      "bin/brain-games"
+    ],
+    "authors": [
+        {
+            "name": "Konstantin Kochnev",
+            "email": "kostyawhite89@gmail.com"
+        }
+    ],
+    "require": {}
+}
