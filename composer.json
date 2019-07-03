@@ -1,14 +1,18 @@
 {
     "name": "kostyawhite/brain-games",
+    "type": "library",
     "description": "Hexlet project",
     "bin": [
       "bin/brain-games"
     ],
-    "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "Konstantin Kochnev",
             "email": "kostyawhite89@gmail.com"
         }
-    ]
+    ],
+    "require": {
+      "php": ">=5.3"
+    }
 }
