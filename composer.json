@@ -3,11 +3,13 @@
     "bin": [
       "bin/brain-games"
     ],
+    "type": "library",
     "authors": [
         {
             "name": "Konstantin Kochnev",
             "email": "kostyawhite89@gmail.com"
         }
     ],
+    "minimum-stability": "dev",
     "require": {}
 }
