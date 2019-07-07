@@ -1,11 +1,6 @@
 <?php
 
 namespace BrainGames\Calc;
-// namespace BrainGames\Cli;
-
-use function \cli\line;
-use function \cli\prompt;
-
 
 function calculate($operand1, $operand2, $op)
 {
@@ -36,5 +31,5 @@ function run()
         return [$question, $result];
     };
     $task = "What is the result of the expression?";
-    \BrainGames\Cli\run($task, $result);
+    \BrainGames\Engine\run($task, $result);
 }
