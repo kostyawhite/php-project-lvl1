@@ -22,12 +22,11 @@ function calculate($operand1, $operand2, $op)
             return $operand1 * $operand2;
             break;
     }
-
 }
 
 function run()
 {
-    $result = function() {
+    $result = function () {
         $operand1 = rand(1, 100);
         $operand2 = rand(1, 100);
         $operators = ['+', '-', '*'];
