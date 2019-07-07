@@ -15,7 +15,7 @@ function run($task, $result)
     while ($correct !== 0) {
         [$question, $rightAnswer] = $result();
         line("Question: %s", $question);
-        $answer = prompt("Your asnwer");
+        $answer = prompt("Your answer");
         if ($rightAnswer == $answer) {
             line("Correct!");
             // as per one correct answer decrease $correct counter
