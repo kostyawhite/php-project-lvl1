@@ -25,6 +25,8 @@ function run($task, $result)
         } else {
             line("'%s' is wrong answer ;(. Correct asnwer was '%s'.", $answer, $rightAnswer);
             line("Let's try again, %s!", $name);
+            // exit if wrong answer
+            return;
         }
     }
     line("Congratulations, %s!", $name);

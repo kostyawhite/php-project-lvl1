@@ -1,9 +1,9 @@
 {
     "name": "kostyawhite/brain-games",
+    "description": "First Hexlet project - Brain Games",
+    "keywords": ["game", "cli", "hexlet"],
     "type": "project",
-    "description": "Hexlet project",
     "bin": [
-      "bin/brain-games",
       "bin/brain-even",
       "bin/brain-calc",
       "bin/brain-gcd",
