@@ -4,12 +4,12 @@ namespace BrainGames\Progression;
 use function BrainGames\Engine\run;
 
 const TASK = 'What number is missing in the progression?';
-const PROGRESSIONLENGTH = 10;
+const PROGRESSION_LENGTH = 10;
 
 function progression($init, $step)
 {
     $progression = [];
-    for ($i = 0; $i < PROGRESSIONLENGTH; $i++) {
+    for ($i = 0; $i < PROGRESSION_LENGTH; $i++) {
         // initial element
         $progression[] = $init;
         // next element
