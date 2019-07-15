@@ -1,33 +1,34 @@
 <?php
 
 namespace BrainGames\Progression;
+use function BrainGames\Engine\run;
+
+const TASK = 'What number is missing in the progression?';
+const PROGRESSIONLENGTH = 10;
 
 function progression($init, $step)
 {
     $progression = [];
-    $counter = 10;
-    while ($counter > 0) {
+    for ($i = 0; $i < PROGRESSIONLENGTH; $i++) {
         // initial element
         $progression[] = $init;
         // next element
         $init += $step;
-        $counter -= 1;
     }
     return $progression;
 }
 
-function run()
+function play()
 {
-    $result = function () {
+    $getResult = function () {
         $init = rand(1, 10);
         $step = rand(1, 10);
         $result = progression($init, $step);
         $idxToFind = array_rand($result);
-        $questionArray = $result;
-        $questionArray[$idxToFind] = "..";
-        $question = implode(' ', $questionArray);
+        $question = $result;
+        $question[$idxToFind] = "..";
+        $question = implode(' ', $question);
         return [$question, $result[$idxToFind]];
     };
-    $task = 'What number is missing in the progression?';
-    \BrainGames\Engine\run($task, $result);
+    run(TASK, $getResult);
 }

@@ -1,10 +1,13 @@
 <?php
 
 namespace BrainGames\Calc;
+use function BrainGames\Engine\run;
 
-function calculate($operand1, $operand2, $op)
+const TASK = "What is the result of the expression?";
+
+function calculate($operand1, $operand2, $operator)
 {
-    switch ($op) {
+    switch ($operator) {
         case '+':
             return $operand1 + $operand2;
             break;
@@ -19,17 +22,16 @@ function calculate($operand1, $operand2, $op)
     }
 }
 
-function run()
+function play()
 {
-    $result = function () {
+    $getResult = function () {
         $operand1 = rand(1, 100);
         $operand2 = rand(1, 100);
         $operators = ['+', '-', '*'];
-        $op = $operators[array_rand($operators, 1)];
-        $result = calculate($operand1, $operand2, $op);
-        $question = "$operand1 $op $operand2";
+        $operator = $operators[array_rand($operators, 1)];
+        $result = calculate($operand1, $operand2, $operator);
+        $question = "$operand1 $operator $operand2";
         return [$question, $result];
     };
-    $task = "What is the result of the expression?";
-    \BrainGames\Engine\run($task, $result);
+    run(TASK, $getResult);
 }

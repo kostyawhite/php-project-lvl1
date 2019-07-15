@@ -1,19 +1,21 @@
 <?php
 
 namespace BrainGames\Even;
+use function BrainGames\Engine\run;
+
+const TASK = 'Answer "yes" if number even otherwise answer "no".';
 
 function isEven($number)
 {
     return $number % 2 === 0;
 }
 
-function run()
+function play()
 {
-    $result = function () {
+    $getResult = function () {
         $question = rand(1, 100);
         $rightAnswer = isEven($question) ? 'yes' : 'no';
         return [$question, $rightAnswer];
     };
-    $task = 'Answer "yes" if number even otherwise answer "no".';
-    \BrainGames\Engine\run($task, $result);
+    run(TASK, $getResult);
 }

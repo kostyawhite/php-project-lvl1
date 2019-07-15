@@ -1,10 +1,14 @@
 <?php
 
 namespace BrainGames\Prime;
+use function BrainGames\Engine\run;
+
+const TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 function isPrime($number)
 {
-    if ($number === 1) {
+    // false for negatives, 0 and 1
+    if ($number < 2) {
         return false;
     }
     for ($i = 2; $i <= $number / 2; $i++) {
@@ -15,14 +19,13 @@ function isPrime($number)
     return true;
 }
 
-function run()
+function play()
 {
-    $result = function () {
+    $getResult = function () {
         $num = rand(1, 100);
         $result = isPrime($num) ? "yes" : "no";
-        $question = "$num";
+        $question = $num;
         return [$question, $result];
     };
-    $task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-    \BrainGames\Engine\run($task, $result);
+    run(TASK, $getResult);
 }
